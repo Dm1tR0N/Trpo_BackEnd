@@ -27,10 +27,7 @@ public class GetDoctorsController : Controller
     public IActionResult Get([FromRoute]Guid idDoctor)
     {
         var doctor = _doctorService.GetDoctorById(idDoctor);
-    
-        if (doctor == null)
-            return NotFound();
-        
+
         return Ok(doctor);
     }
     

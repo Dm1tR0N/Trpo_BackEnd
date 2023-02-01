@@ -1,7 +1,8 @@
-using TRPOFirst.Services;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
+//using TRPOFirst.Data;
 
 namespace TRPOFirst.Installer;
 
@@ -12,10 +13,10 @@ public static class DbInstaller
 {
     public static void AddDbContext(this IServiceCollection services, IConfiguration configuration)
     {
-        // services.AddDbContext<DataContext>(options =>
-        //     options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-        // services.AddDefaultIdentity<IdentityUser>()
-        //     .AddEntityFrameworkStores<DataContext>();
-        services.AddSingleton<IDoctorService, DoctorService>();
+         // services.AddDbContext<DataContext>(options =>
+         //     options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+         // services.AddDefaultIdentity<IdentityUser>()
+         //     .AddEntityFrameworkStores<DataContext>();
+         // services.AddSingleton<IDoctorService, DoctorService>();
     }
 }
