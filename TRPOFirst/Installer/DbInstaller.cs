@@ -11,7 +11,7 @@ namespace TRPOFirst.Installer;
 /// </summary>
 public static class DbInstaller
 {
-    public static void AddDbContext(this IServiceCollection services, IConfiguration configuration)
+    public static void AddDbContext(this IServiceCollection services, string? configuration)
     {
          // services.AddDbContext<DataContext>(options =>
          //     options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));

@@ -27,7 +27,9 @@ public class GetDoctorsController : Controller
     public IActionResult Get([FromRoute]Guid idDoctor)
     {
         var doctor = _doctorService.GetDoctorById(idDoctor);
-
+        if (doctor == null)
+            return NotFound(); // Если результат будет отсутствовать, то вывести ошибку 404
+        
         return Ok(doctor);
     }
     
@@ -52,7 +54,9 @@ public class GetDoctorsController : Controller
     
         var baseUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host.ToUriComponent()}";
     
-        var locationUri = baseUrl + "/" + ApiRoutes.Hospital.GetDoctors.Replace("{IdDoctor}", doctors.IdDoctor.ToString());
+        var locationUri = baseUrl + "/" + ApiRoutes.Hospital.GetDoctors;
+
+        locationUri = locationUri.Replace("{IdDoctor}", doctors.IdDoctor.ToString());
         
         var response = new DoctorResponse
         {

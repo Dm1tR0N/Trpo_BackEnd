@@ -14,12 +14,12 @@ public class DoctorService : IDoctorService
     public DoctorService()
     {
         _doctors = new List<Doctors>();
-        for (var i = 0; i < 5; i++)
+        for (var i = 0; i < 15; i++)
         {
             _doctors.Add(new Doctors
             {
                 IdDoctor = Guid.NewGuid(),
-                FirstName = "Имя",
+                FirstName = "Человек" + i,
                 LastName = "Фамилия",
                 MiddleName = "Отчество",
                 post = null,
@@ -36,8 +36,7 @@ public class DoctorService : IDoctorService
 
     public Doctors GetDoctorById(Guid idDoctor)
     {
-        return _doctors.SingleOrDefault(x => x.IdDoctor == idDoctor);
+        var result = _doctors.SingleOrDefault(x => x.IdDoctor == idDoctor);
+        return result;
     }
-
-
 }
