@@ -12,6 +12,8 @@ public static class ApiRoutes
     {
         // Все связанное с Пациентами
         public const string GetAllPacients = Base + "/pacients";
+        
+        public const string UpdatePacients = Base + "/pacients/{IdPacient}";
 
         public const string GetPacients = Base + "/pacients/{IdPacient}";
         

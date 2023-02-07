@@ -4,33 +4,53 @@ using TRPOFirst.Contracts.Hospital;
 using TRPOFirst.Contracts.Hospital.Requests;
 using TRPOFirst.Contracts.Hospital.Responses;
 using TRPOFirst.Domian;
+using TRPOFirst.Services;
 
 namespace TRPOFirst.Controllers.Hospital;
 
 public class GetPacientController : Controller
 {
-    private List<Pacients> _pacients;
+    private readonly IPacientService _pacientService;
     
-    public GetPacientController()
+    public GetPacientController(IPacientService pacientService)
     {
-        _pacients = new List<Pacients>();
-        for (int i = 0; i < 5; i++)
-        {
-            _pacients.Add(new Pacients
-            {
-                IdPacient = Guid.NewGuid(),
-                FirstName = "Имя",
-                LastName = "Фамилия",
-                MiddleName = "Отчество",
-                Age = 20,
-                Polis = Convert.ToString((12345678912 + i))
-            });
-        }
+        _pacientService = pacientService;
     }
     [HttpGet(ApiRoutes.Hospital.GetAllPacients)]
     public IActionResult GetAll()
     {
-        return Ok(_pacients);
+        return Ok(_pacientService.GetPacient());
+    }
+    
+    [HttpPut(ApiRoutes.Hospital.UpdatePacients)] // Проклетая строчка из за которой 2 дня еб23424к23к2я №;№";
+    public IActionResult UpdatePacients([FromRoute]Guid IdPacient, [FromBody] UpdatePacientRequest request)
+    {
+        var pacient = new Pacients()
+        {
+            IdPacient = IdPacient,
+            FirstName = request.FirstName,
+            LastName = request.LastName,
+            MiddleName = request.MiddleName,
+            Age = request.Age,
+            Polis = request.Polis
+        };
+
+        var updated = _pacientService.UpdatePacient(pacient);
+
+        if (updated)
+            return Ok(pacient);
+        
+        return NotFound();
+    }
+    
+    [HttpGet(ApiRoutes.Hospital.GetPacients)] // Проклетая строчка из за которой 2 дня еб23424к23к2я №;№";
+    public IActionResult Get([FromRoute]Guid IdPacient)
+    {
+        var pacient = _pacientService.GetPacientById(IdPacient);
+        if (pacient == null)
+            return NotFound(); // Если результат будет отсутствовать, то вывести ошибку 404
+        
+        return Ok(pacient);
     }
     
     [HttpPost(ApiRoutes.Hospital.CreatePacients)]
@@ -49,7 +69,7 @@ public class GetPacientController : Controller
         if (pacient.IdPacient != Guid.Empty)
             pacient.IdPacient = Guid.NewGuid();
         
-        _pacients.Add(pacient);
+        _pacientService.GetPacient().Add(pacient);
     
         var baseUrl = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host.ToUriComponent()}";
     
