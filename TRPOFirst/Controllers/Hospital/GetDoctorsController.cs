@@ -23,6 +23,28 @@ public class GetDoctorsController : Controller
         return Ok(_doctorService.GetDoctors());
     }
     
+    [HttpPut(ApiRoutes.Hospital.UpdateDoctor)] // Проклетая строчка из за которой 2 дня еб23424к23к2я №;№";
+    public IActionResult UpdateDoctor([FromRoute]Guid idDoctor, [FromBody] UpdateDoctorRequest request)
+    {
+        var doctor = new Doctors
+        {
+            IdDoctor = idDoctor,
+            FirstName = request.FirstName,
+            LastName = request.LastName,
+            MiddleName = request.MiddleName,
+            post = request.post,
+            receptionSchedule = request.receptionSchedule,
+            DoctorInfo = request.DoctorInfo
+        };
+
+        var updated = _doctorService.UpdateDoctor(doctor);
+
+        if (updated)
+            return Ok(doctor);
+        
+        return NotFound();
+    }
+    
     [HttpGet(ApiRoutes.Hospital.GetDoctors)] // Проклетая строчка из за которой 2 дня еб23424к23к2я №;№";
     public IActionResult Get([FromRoute]Guid idDoctor)
     {

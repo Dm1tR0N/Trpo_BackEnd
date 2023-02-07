@@ -12,7 +12,7 @@ public static class ApiRoutes
     {
         // Все связанное с Пациентами
         public const string GetAllPacients = Base + "/pacients";
-        
+
         public const string GetPacients = Base + "/pacients/{IdPacient}";
         
         public const string CreatePacients = Base + "/pacients";
@@ -20,7 +20,9 @@ public static class ApiRoutes
         // Все связанное с Докторами
         public const string GetAllDoctors = Base + "/doctors";
         
-        public const string GetDoctors = Base + "/doctors/{IdDoctor}";
+        public const string UpdateDoctor = Base + "/doctors/{idDoctor}";
+        
+        public const string GetDoctors = Base + "/doctors/{idDoctor}";
         
         public const string CreateDoctors = Base + "/doctors";
 

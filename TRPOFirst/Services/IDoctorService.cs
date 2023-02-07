@@ -7,4 +7,6 @@ public interface IDoctorService
     List<Doctors> GetDoctors();
 
     Doctors GetDoctorById(Guid IdDoctor);
+
+    bool UpdateDoctor(Doctors updateToDoctors);
 }

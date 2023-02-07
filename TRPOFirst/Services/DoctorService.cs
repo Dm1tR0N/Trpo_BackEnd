@@ -28,7 +28,7 @@ public class DoctorService : IDoctorService
             }); // Нулл будет до тех пор пока не свяяжу с АПИ с БД
         }
     }
-    
+
     public List<Doctors> GetDoctors()
     {
         return _doctors;
@@ -38,5 +38,17 @@ public class DoctorService : IDoctorService
     {
         var result = _doctors.SingleOrDefault(x => x.IdDoctor == idDoctor);
         return result;
+    }
+
+    public bool UpdateDoctor(Doctors updateToDoctors)
+    {
+        var exist = GetDoctorById(updateToDoctors.IdDoctor) != null;
+
+        if (!exist)
+            return false;
+
+        var index = _doctors.FindIndex(x => x.IdDoctor == updateToDoctors.IdDoctor);
+        _doctors[index] = updateToDoctors;
+        return true;
     }
 }
