@@ -1,3 +1,4 @@
+using TRPOFirst.Domian;
 using TRPOFirst.Installer;
 using TRPOFirst.Services;
 
@@ -15,6 +16,8 @@ builder.Services.AddSwaggerGen();
 // Этот метод имеет все те же перегруженые версии, что и AddTransient и AddScoped.
 builder.Services.AddSingleton<IDoctorService, DoctorService>();
 builder.Services.AddSingleton<IPacientService, PacientService>();
+builder.Services.AddSingleton<IPostService, PostService>();
+builder.Services.AddSingleton<IScheduleResponseService, ScheduleResponseService>();
 
 builder.Services.AddDbContext(configuration: new ConfigurationManager().GetConnectionString(connection));
 

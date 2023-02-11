@@ -27,6 +27,25 @@ public static class ApiRoutes
         public const string GetDoctors = Base + "/doctors/{idDoctor}";
         
         public const string CreateDoctors = Base + "/doctors";
+        
+        // Все связанное с Специальностями
+        public const string GetAllPosts = Base + "/posts";
+        
+        public const string UpdatePosts = Base + "/posts/{idPost}";
+        
+        public const string GetPosts = Base + "/posts/{idPost}";
+        
+        public const string CreatePosts = Base + "/posts";
+        
+        // Все связанно с Первичным осмотром
+        public const string GetAllReceptionSchedule = Base + "/receptionSchedule";
+        
+        public const string UpdateReceptionSchedule = Base + "/receptionSchedule/{idReceptionSchedule}";
+        
+        public const string GetReceptionSchedule = Base + "/receptionSchedule/{idReceptionSchedule}";
+        
+        public const string CreateReceptionSchedule = Base + "/receptionSchedule";
+        
 
     }
 }

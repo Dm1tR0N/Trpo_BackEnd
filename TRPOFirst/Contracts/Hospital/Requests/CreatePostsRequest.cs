@@ -1,9 +1,6 @@
-namespace TRPOFirst.Domian;
+﻿namespace TRPOFirst.Contracts.Hospital.Requests;
 
-/// <summary>
-/// Сущность представляющая специальности докторов
-/// </summary>
-public class Posts
+public class CreatePostsRequest
 {
     // <summary>
     /// Идентификатор

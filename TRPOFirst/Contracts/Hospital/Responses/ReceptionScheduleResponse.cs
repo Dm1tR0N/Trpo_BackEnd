@@ -1,15 +1,11 @@
-namespace TRPOFirst.Domian;
+﻿namespace TRPOFirst.Contracts.Hospital.Responses;
 
-/// <summary>
-/// Сущность представляющая расписание доктора
-/// </summary>
-public class ReceptionSchedule
+public class ReceptionScheduleResponse
 {
     /// <summary>
     /// Идентификатор
     /// </summary>
     public Guid IdReceptionSchedule { get; set; }
-
     /// <summary>
     /// Время начала работы
     /// </summary>

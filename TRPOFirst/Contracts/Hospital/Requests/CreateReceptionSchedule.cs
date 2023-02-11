@@ -1,9 +1,6 @@
-namespace TRPOFirst.Domian;
+﻿namespace TRPOFirst.Contracts.Hospital.Requests;
 
-/// <summary>
-/// Сущность представляющая расписание доктора
-/// </summary>
-public class ReceptionSchedule
+public class CreateReceptionSchedule
 {
     /// <summary>
     /// Идентификатор
