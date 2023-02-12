@@ -8,11 +8,11 @@ using TRPOFirst.Services;
 
 namespace TRPOFirst.Controllers.Hospital;
 
-public class GetPacientController : Controller
+public class PacientController : Controller
 {
     private readonly IPacientService _pacientService;
     
-    public GetPacientController(IPacientService pacientService)
+    public PacientController(IPacientService pacientService)
     {
         _pacientService = pacientService;
     }

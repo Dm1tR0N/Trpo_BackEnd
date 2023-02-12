@@ -7,11 +7,11 @@ using TRPOFirst.Domian;
 
 namespace TRPOFirst.Controllers.Hospital;
 
-public class GetPostsController : Controller
+public class PostsController : Controller
 {
     private readonly IPostService _postService;
     
-    public GetPostsController(IPostService postService)
+    public PostsController(IPostService postService)
     {
         _postService = postService;
     }

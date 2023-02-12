@@ -7,11 +7,11 @@ using TRPOFirst.Domian;
 
 namespace TRPOFirst.Controllers.Hospital;
 
-public class GetReceptionScheduleController : Controller
+public class ReceptionScheduleController : Controller
 {
     private readonly IScheduleResponseService _ReceptionScheduleService;
     
-    public GetReceptionScheduleController(IScheduleResponseService ReceptionScheduleService)
+    public ReceptionScheduleController(IScheduleResponseService ReceptionScheduleService)
     {
         _ReceptionScheduleService = ReceptionScheduleService;
     }

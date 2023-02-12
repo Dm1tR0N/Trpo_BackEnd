@@ -8,12 +8,12 @@ using TRPOFirst.Services;
 
 namespace TRPOFirst.Controllers.Hospital;
 
-public class GetDoctorsController : Controller
+public class DoctorsController : Controller
 {
 
     private readonly IDoctorService _doctorService;
     
-    public GetDoctorsController(IDoctorService doctorService)
+    public DoctorsController(IDoctorService doctorService)
     {
         _doctorService = doctorService;
     }
