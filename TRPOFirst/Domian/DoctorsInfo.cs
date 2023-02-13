@@ -8,7 +8,7 @@ public class DoctorsInfo
     /// <summary>
     /// Атрибут представляющий собой уникальный для каждого пациента идентификатор
     /// </summary>
-    public string IdDoctorsInfo { get; set; }
+    public Guid IdDoctorsInfo { get; set; }
     
     /// <summary>
     /// Атрибут представляющий собой Имя пациента

@@ -1,9 +1,8 @@
-namespace TRPOFirst.Domian;
+﻿using TRPOFirst.Domian;
 
-/// <summary>
-/// Сущьность представляющая собой таблицу первичных приёмов у врача
-/// </summary>
-public class DoctorsAppointments
+namespace TRPOFirst.Contracts.Hospital.Requests;
+
+public class CreateDoctorsAppointment
 {
     /// <summary>
     /// Атрибут представляющий собой уникальный для каждого приёма идентификатор

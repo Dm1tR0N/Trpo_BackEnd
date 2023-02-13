@@ -1,4 +1,5 @@
 ﻿using TRPOFirst.Domian;
+using TRPOFirst.Settings;
 
 namespace TRPOFirst.Services;
 
@@ -9,7 +10,7 @@ public class PostService : IPostService
     public PostService()
     {
         _posts = new List<Posts>();
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < DataApi.QuantityRequest; i++)
         {
             _posts.Add(new Posts
             {

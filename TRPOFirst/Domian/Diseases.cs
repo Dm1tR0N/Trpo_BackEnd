@@ -8,7 +8,7 @@ public class Diseases
     /// <summary>
     /// Атрибут представляющий собой уникальный для каждого диагноза идентификатор
     /// </summary>
-    public string? IdDiseases { get; set; }
+    public Guid? IdDiseases { get; set; }
     
     /// <summary>
     /// Атрибут представляющий собой название заболевания

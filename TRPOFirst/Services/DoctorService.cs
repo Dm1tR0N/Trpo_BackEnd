@@ -3,6 +3,7 @@ using TRPOFirst.Contracts.Hospital;
 using TRPOFirst.Contracts.Hospital.Requests;
 using TRPOFirst.Contracts.Hospital.Responses;
 using TRPOFirst.Domian;
+using TRPOFirst.Settings;
 using System.Collections.Generic;
 
 namespace TRPOFirst.Services;
@@ -14,7 +15,7 @@ public class DoctorService : IDoctorService
     public DoctorService()
     {
         _doctors = new List<Doctors>();
-        for (var i = 0; i < 15; i++)
+        for (var i = 0; i < DataApi.QuantityRequest; i++)
         {
             _doctors.Add(new Doctors
             {

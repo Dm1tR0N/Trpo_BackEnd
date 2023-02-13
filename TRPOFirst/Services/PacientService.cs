@@ -3,6 +3,7 @@ using TRPOFirst.Contracts.Hospital;
 using TRPOFirst.Contracts.Hospital.Requests;
 using TRPOFirst.Contracts.Hospital.Responses;
 using TRPOFirst.Domian;
+using TRPOFirst.Settings;
 using System.Collections.Generic;
 
 namespace TRPOFirst.Services;
@@ -14,7 +15,7 @@ public class PacientService : IPacientService
     public PacientService()
     {
         _pacients = new List<Pacients>();
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < DataApi.QuantityRequest; i++)
         {
             _pacients.Add(new Pacients
             {

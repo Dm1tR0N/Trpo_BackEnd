@@ -1,4 +1,5 @@
 ﻿using TRPOFirst.Domian;
+using TRPOFirst.Settings;
 
 namespace TRPOFirst.Services;
 
@@ -9,7 +10,7 @@ public class ScheduleResponseService : IScheduleResponseService
     public ScheduleResponseService()
     {
         _ReceptionSchedules = new List<ReceptionSchedule>();
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < DataApi.QuantityRequest; i++)
         {
             _ReceptionSchedules.Add(new ReceptionSchedule
             {

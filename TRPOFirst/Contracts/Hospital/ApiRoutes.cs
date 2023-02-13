@@ -46,6 +46,16 @@ public static class ApiRoutes
         
         public const string CreateReceptionSchedule = Base + "/receptionSchedule";
         
+        // Все связанно с основным осмотром осмотром
+        public const string GetAllDoctorsAppointments = Base + "/doctorsAppointments";
+        
+        public const string UpdateDoctorsAppointments = Base + "/doctorsAppointments/{idDoctorsAppointments}";
+        
+        public const string GetDoctorsAppointments = Base + "/doctorsAppointments/{idDoctorsAppointments}";
+        
+        public const string CreateDoctorsAppointments = Base + "/doctorsAppointments";
+
+        
 
     }
 }

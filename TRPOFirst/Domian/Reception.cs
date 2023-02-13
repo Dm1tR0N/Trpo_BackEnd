@@ -8,7 +8,7 @@ public class Reseption
     // <summary>
     /// Идентификатор
     /// </summary>
-    public int IdReception { get; set; }
+    public Guid IdReception { get; set; }
 
     /// <summary>
     /// Ссылка на первичный осмотр врача

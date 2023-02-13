@@ -1,19 +1,13 @@
-namespace TRPOFirst.Domian;
+﻿using TRPOFirst.Domian;
 
-/// <summary>
-/// Сущьность представляющая собой таблицу первичных приёмов у врача
-/// </summary>
-public class DoctorsAppointments
+namespace TRPOFirst.Contracts.Hospital.Requests;
+
+public class UpdateDoctorsAppointment
 {
-    /// <summary>
-    /// Атрибут представляющий собой уникальный для каждого приёма идентификатор
-    /// </summary>
-    public Guid idDoctorsAppointments { get; set; }
-    
     /// <summary>
     /// Атрибут представляющий собой ссылку на доктора, который проводил первичный осмотр
     /// </summary>
-    public Doctors? IdDoctor { get; set; }
+    public Doctors? idDoctor { get; set; }
     
     /// <summary>
     /// Атрибут представляющий собой ссылку на пациента, который был осмотрен
