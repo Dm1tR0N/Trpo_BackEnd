@@ -54,8 +54,16 @@ public static class ApiRoutes
         public const string GetDoctorsAppointments = Base + "/doctorsAppointments/{idDoctorsAppointments}";
         
         public const string CreateDoctorsAppointments = Base + "/doctorsAppointments";
-
         
-
+        // Все связанно с основным осмотром осмотром
+        public const string GetAllDoctorsInfo = Base + "/doctorsInfo";
+        
+        public const string UpdateDoctorsInfo= Base + "/doctorsInfo/{idDoctorsInfo}";
+        
+        public const string GetDoctorsInfo = Base + "/doctorsInfo/{idDoctorsInfo}";
+        
+        public const string CreateDoctorsInfo = Base + "/doctorsInfo";
+        
+        // НЕ ЗАКОНЧИНА ДОБАВИЛ ТОЛЬКО REQUESTS
     }
 }
