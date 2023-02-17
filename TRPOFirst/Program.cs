@@ -21,8 +21,8 @@ builder.Services.AddSingleton<IPostService,                PostService>();
 builder.Services.AddSingleton<IScheduleResponseService,    ScheduleResponseService>();
 builder.Services.AddSingleton<IDoctorsAppointmentsService, DoctorsAppointmentsService>();
 builder.Services.AddSingleton<IDoctorsInfoService,         DoctorsInfoService>();
-// builder.Services.AddSingleton<IReseptionService,           ReseptionService>();
-// builder.Services.AddSingleton<IDiseasesService,            DiseasesService>();
+builder.Services.AddSingleton<IReceptionService,           ReceptionService>();
+builder.Services.AddSingleton<IDiseasesService,            DiseasesService>();
 
 builder.Services.AddDbContext(connection);
 

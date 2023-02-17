@@ -55,7 +55,7 @@ public static class ApiRoutes
         
         public const string CreateDoctorsAppointments = Base + "/doctorsAppointments";
         
-        // Все связанно с основным осмотром осмотром
+        // Все связанно с основным основоной информацией о докторе
         public const string GetAllDoctorsInfo = Base + "/doctorsInfo";
         
         public const string UpdateDoctorsInfo= Base + "/doctorsInfo/{idDoctorsInfo}";
@@ -64,6 +64,22 @@ public static class ApiRoutes
         
         public const string CreateDoctorsInfo = Base + "/doctorsInfo";
         
-        // НЕ ЗАКОНЧИНА ДОБАВИЛ ТОЛЬКО REQUESTS
+        // Все связанно с --
+        public const string GetAllReception = Base + "/reception";
+        
+        public const string UpdateReception = Base + "/reception/{IdReception}";
+        
+        public const string GetReception = Base + "/reception/{IdReception}";
+        
+        public const string CreateReception = Base + "/reception";
+        
+        // Все связанно с болезнями
+        public const string GetAllDiseases = Base + "/diseases";
+        
+        public const string UpdateDiseases = Base + "/diseases/{IdDiseases}";
+        
+        public const string GetDiseases = Base + "/diseases/{IdDiseases}";
+        
+        public const string CreateDiseases = Base + "/diseases";
     }
 }

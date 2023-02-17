@@ -1,15 +1,7 @@
-namespace TRPOFirst.Domian;
+﻿namespace TRPOFirst.Contracts.Hospital.Requests;
 
-/// <summary>
-/// Сущьность представляющая собой таблицу с заболеваниями
-/// </summary>
-public class Diseases
+public class UpdateDiseasesRequest
 {
-    /// <summary>
-    /// Атрибут представляющий собой уникальный для каждого диагноза идентификатор
-    /// </summary>
-    public Guid IdDiseases { get; set; }
-    
     /// <summary>
     /// Атрибут представляющий собой название заболевания
     /// </summary>
