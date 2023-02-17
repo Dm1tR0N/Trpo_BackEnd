@@ -89,3 +89,6 @@ C:\Users\Александр\Desktop\TRPOFirst\TRPOFirst\obj\Debug\net7.0\TRPOFir
 C:\Users\Александр\Desktop\TRPOFirst\TRPOFirst\obj\Debug\net7.0\ref\TRPOFirst.dll
 C:\Users\Александр\Desktop\TRPOFirst\TRPOFirst\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\Александр\Desktop\TRPOFirst\TRPOFirst\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Александр\Desktop\TRPOFirst\TRPOFirst\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Александр\Desktop\TRPOFirst\TRPOFirst\bin\Debug\net7.0\Npgsql.dll
+C:\Users\Александр\Desktop\TRPOFirst\TRPOFirst\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

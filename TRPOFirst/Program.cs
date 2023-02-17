@@ -1,11 +1,17 @@
+using Microsoft.EntityFrameworkCore;
 using TRPOFirst.Domian;
 using TRPOFirst.Installer;
 using TRPOFirst.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-string connection = "DefaultConnection";
+DbContextOptionsBuilder connection = new DbContextOptionsBuilder();
+connection.UseNpgsql(
+        "Host=localhost;" +
+                      "Port=5432;" +
+                      "Database=Hospital;" +
+                      "Username=postgres;" +
+                      "Password=****");
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -23,8 +29,6 @@ builder.Services.AddSingleton<IDoctorsAppointmentsService, DoctorsAppointmentsSe
 builder.Services.AddSingleton<IDoctorsInfoService,         DoctorsInfoService>();
 builder.Services.AddSingleton<IReceptionService,           ReceptionService>();
 builder.Services.AddSingleton<IDiseasesService,            DiseasesService>();
-
-builder.Services.AddDbContext(connection);
 
 var app = builder.Build();
 
